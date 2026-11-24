@@ -11,9 +11,15 @@
   <link rel="stylesheet" href="../css/style.css">
   <style>
     .policy-container {
-      max-width: 780px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: clamp(32px, 5vw, 64px) 20px clamp(64px, 8vw, 96px);
+      padding: clamp(32px, 5vw, 64px) 24px clamp(64px, 8vw, 96px);
+    }
+    @media (max-width: 768px) {
+      .policy-container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
     .policy-header {
       margin-bottom: 2.5rem;
