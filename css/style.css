@@ -242,6 +242,245 @@ p { margin: 0 0 1em; }
 .contact a:hover { text-decoration: underline; }
 .hero__portrait figcaption small { font: 500 .75rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; font-style: normal; color: var(--saffron-deep); display: inline-block; margin-top: .6rem; }
 
+/* ============ Projects Section ============ */
+.project-showcase {
+  margin-top: 1.5rem;
+}
+.project-card {
+  background: #fffdf9;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) * 1.3);
+  padding: clamp(28px, 4vw, 44px);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  box-shadow: 0 12px 36px -18px rgba(62,24,19,.15);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.project-card:hover {
+  border-color: var(--saffron);
+  box-shadow: 0 20px 48px -20px rgba(62,24,19,.22);
+}
+.project-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.project-badge {
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .35em .8em;
+  border-radius: 999px;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+.project-badge--accent {
+  background: rgba(200,120,30,.12);
+  color: var(--saffron-deep);
+  border-color: rgba(200,120,30,.35);
+}
+.project-card__title {
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  color: var(--maroon);
+  margin-bottom: .25rem;
+  line-height: 1.1;
+}
+.project-card__title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color .2s;
+}
+.project-card__title a:hover {
+  color: var(--saffron-deep);
+}
+.project-card__sub {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--saffron-deep);
+  margin-bottom: 1.1rem;
+}
+.project-card__desc {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+.project-card__keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  padding: 10px 14px;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px dashed var(--line);
+}
+.key-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 7px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.key-pill--accent {
+  background: #fff8f0;
+  border-color: #eed6bf;
+  color: var(--saffron-deep);
+  font-weight: 600;
+}
+.key-pill-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--line);
+  margin: 0 4px;
+}
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.project-card__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Phone & Keyboard Mockup */
+.project-card__preview {
+  text-decoration: none;
+  display: block;
+  perspective: 1000px;
+}
+.phone-frame {
+  background: #231d19;
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: 0 24px 50px -15px rgba(35,29,25,.4), inset 0 0 0 1px rgba(255,255,255,.1);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.project-card:hover .phone-frame {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 30px 60px -18px rgba(35,29,25,.5), inset 0 0 0 1px rgba(255,255,255,.15);
+}
+.phone-frame__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 10px 10px;
+  color: #c9b39e;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+.phone-frame__indicator {
+  font-size: .68rem;
+  background: rgba(200,120,30,.25);
+  color: #f0bb78;
+  padding: .2em .6em;
+  border-radius: 999px;
+}
+.phone-frame__screen {
+  background: #191411;
+  border-radius: 18px;
+  padding: 14px 12px 12px;
+  overflow: hidden;
+}
+.mock-textbox {
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+.mock-textbox__label {
+  display: block;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #9d8876;
+  margin-bottom: 3px;
+}
+.mock-textbox__text {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: #fff4e5;
+  line-height: 1.35;
+  font-style: italic;
+}
+.mock-keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  user-select: none;
+}
+.mock-keyboard__row {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+.mock-keyboard__row span {
+  flex: 1;
+  height: 32px;
+  max-width: 32px;
+  background: #342b25;
+  color: #eee1d2;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 500;
+  box-shadow: 0 1px 0 rgba(0,0,0,.3);
+}
+.mock-keyboard__row--pali span {
+  background: #443224;
+  color: #f7ca97;
+  font-weight: 600;
+}
+.mock-keyboard__row--bottom .mock-key--mod {
+  flex: 1.4;
+  max-width: 44px;
+  background: #2b221d;
+  color: #baa491;
+  font-size: .75rem;
+}
+.mock-keyboard__row--space .mock-key--switch {
+  flex: 2.2;
+  max-width: 82px;
+  background: #2b221d;
+  color: #f0bb78;
+  font-size: .65rem;
+}
+.mock-keyboard__row--space .mock-key--space {
+  flex: 4;
+  max-width: 140px;
+  font-size: .7rem;
+  color: #baa491;
+}
+.mock-keyboard__row--space .mock-key--enter {
+  flex: 1.5;
+  max-width: 50px;
+  background: var(--saffron-deep);
+  color: #fff;
+}
+
 /* Footer */
 .footer { text-align: center; padding: 48px 24px; background: var(--maroon-deep); color: #c9b39e; border-top: 1px solid rgba(255,255,255,.1); }
 .footer p:first-child { font: italic 400 1.25rem/1.4 var(--serif); color: #f3e6d6; }
@@ -276,6 +515,7 @@ p { margin: 0 0 1em; }
 /* ============ Responsive ============ */
 @media (max-width: 900px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .project-card { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: 1fr 1fr; row-gap: 40px; }
   .timeline::before { display: none; }
   .gallery { grid-template-columns: repeat(3, 1fr); }
